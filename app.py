@@ -14,7 +14,6 @@ st.markdown("""
 .stApp {
     background: radial-gradient(circle at 50% 50%, #1e123d 0%, #0f091f 100%);
     color: #f0f0ff;
-    padding-top: 60px; /* 增加顶部内边距，将整个应用向下推，避开手机状态栏 */
 }
 
 h1 {
@@ -97,9 +96,21 @@ hr {
 
 .main .block-container {
     padding-bottom: 80px !important;
-    padding-top: 30px !important;
+    padding-top: 80px !important; /* 增加页面内容顶部间距，防止被下移的按钮遮挡 */
 }
 
+/* 解决移动端 WebView 状态栏遮挡按钮的核心 CSS */
+header[data-testid="stHeader"] {
+    top: 50px !important; /* 将整个顶部栏下移 50px */
+    background: transparent !important;
+}
+
+[data-testid="stSidebarToggleButton"] {
+    transform: translateY(50px) !important; /* 强制按钮向下平移 */
+    background-color: rgba(30, 18, 61, 0.6) !important; /* 增加半透明背景增加视觉辨识度 */
+    border-radius: 8px !important;
+    margin-left: 5px !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
