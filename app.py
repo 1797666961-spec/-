@@ -14,6 +14,7 @@ st.markdown("""
 .stApp {
     background: radial-gradient(circle at 50% 50%, #1e123d 0%, #0f091f 100%);
     color: #f0f0ff;
+    padding-top: 60px; /* 增加顶部内边距，将整个应用向下推，避开手机状态栏 */
 }
 
 h1 {
@@ -99,13 +100,6 @@ hr {
     padding-top: 30px !important;
 }
 
-/* 调整侧边栏弹出按钮位置，避免与手机状态栏重叠 */
-/* 更可靠的定位方式，确保按钮向下移动 */
-[data-testid="stSidebarToggleButton"] {
-    position: fixed !important; /* 确保是固定定位 */
-    top: 300px !important; /* 调整此值以避开状态栏，例如60px-80px */
-    left: 50px !important; /* 可以根据需要微调左右位置 */
-}
 </style>
 """, unsafe_allow_html=True)
 
