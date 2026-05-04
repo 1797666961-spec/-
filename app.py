@@ -100,8 +100,11 @@ hr {
 }
 
 /* 调整侧边栏弹出按钮位置，避免与手机状态栏重叠 */
+/* 更可靠的定位方式，确保按钮向下移动 */
 [data-testid="stSidebarToggleButton"] {
-    margin-top: 200px !important; /* 根据实际手机状态栏高度调整此值 */
+    position: fixed !important; /* 确保是固定定位 */
+    top: 60px !important; /* 调整此值以避开状态栏，例如60px-80px */
+    left: 10px !important; /* 可以根据需要微调左右位置 */
 }
 </style>
 """, unsafe_allow_html=True)
