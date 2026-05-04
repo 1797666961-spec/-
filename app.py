@@ -101,7 +101,7 @@ hr {
 
 /* 调整侧边栏弹出按钮位置，避免与手机状态栏重叠 */
 [data-testid="stSidebarToggleButton"] {
-    margin-top: 30px !important; /* 根据实际手机状态栏高度调整此值 */
+    margin-top: 200px !important; /* 根据实际手机状态栏高度调整此值 */
 }
 </style>
 """, unsafe_allow_html=True)
