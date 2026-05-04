@@ -103,8 +103,8 @@ hr {
 /* 更可靠的定位方式，确保按钮向下移动 */
 [data-testid="stSidebarToggleButton"] {
     position: fixed !important; /* 确保是固定定位 */
-    top: 60px !important; /* 调整此值以避开状态栏，例如60px-80px */
-    left: 10px !important; /* 可以根据需要微调左右位置 */
+    top: 300px !important; /* 调整此值以避开状态栏，例如60px-80px */
+    left: 50px !important; /* 可以根据需要微调左右位置 */
 }
 </style>
 """, unsafe_allow_html=True)
